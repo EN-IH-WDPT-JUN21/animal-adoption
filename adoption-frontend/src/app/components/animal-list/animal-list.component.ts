@@ -47,13 +47,15 @@ export class AnimalListComponent implements OnInit {
       const animalListResponse: AnimalResponse = result;
       console.log(animalListResponse)
 
+      console.log(result[1].name)
+
 
      for (let i=0; result.length; i++){
-        let animalId:number = result[i];
-        let animalName:string = animalListResponse.results[i].name;
-        let animalType:string = animalListResponse.results[i].type;
-        let animalAge:number = animalListResponse.results[i].age;
-        let animalAvailable:boolean = animalListResponse.results[i].available;
+        let animalId:number = result[i].id;
+        let animalName:string = result[i].name
+        let animalType:string = result[i].type
+        let animalAge:number = result[i].age
+        let animalAvailable:boolean = result[i].available
 
         this.animalList.push(new Animal(animalId,animalName,animalType,animalAge,animalAvailable));
 
