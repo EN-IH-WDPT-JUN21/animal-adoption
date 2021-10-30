@@ -12,6 +12,7 @@ import java.util.List;
 public interface AnimalRepository extends JpaRepository<Animal, Long> {
 
     List<Animal> findByType(String type);
+
     List<Animal> findByAgeBetween(Long age1, Long age2);
 
     @Query(value = "SELECT a FROM Animal a WHERE a.available = true")

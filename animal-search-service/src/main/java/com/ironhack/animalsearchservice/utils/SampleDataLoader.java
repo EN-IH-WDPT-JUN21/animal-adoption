@@ -29,7 +29,7 @@ public class SampleDataLoader implements CommandLineRunner {
                 .mapToObj(i -> new Animal(
                         faker.funnyName().name(),
                         faker.animal().name(),
-                        faker.number().randomNumber(),
+                        faker.number().numberBetween(0L, 20L),
                         faker.random().nextBoolean()
                 )).collect(Collectors.toList());
 

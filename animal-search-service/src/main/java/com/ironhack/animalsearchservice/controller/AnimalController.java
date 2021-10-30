@@ -22,11 +22,6 @@ public class AnimalController {
         return animalService.findAll();
     }
 
-    @GetMapping("/available")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public List<Animal> findAllAvailable(){
-        return animalService.findAllAvailable();
-    }
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
@@ -45,6 +40,25 @@ public class AnimalController {
     public List<Animal> findByAgeBetween(@PathVariable(name="ageFrom") Long ageFrom,
                                          @PathVariable(name="ageTo") Long ageTo){
         return animalService.findByAgeBetween(ageFrom, ageTo);
+    }
+
+    @GetMapping("/available")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public List<Animal> findAllAvailable(){
+        return animalService.findAllAvailable();
+    }
+
+    @GetMapping("/available/{type}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Animal> findAvailableByType(@PathVariable String type){
+        return animalService.findAvailableByType(type);
+    }
+
+    @GetMapping("/available/{ageFrom}/{ageTo}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Animal> findAvailableByAgeBetween(@PathVariable(name="ageFrom") Long ageFrom,
+                                         @PathVariable(name="ageTo") Long ageTo){
+        return animalService.findAvilableByAgeBetween(ageFrom, ageTo);
     }
 
     @PutMapping("/{id}")

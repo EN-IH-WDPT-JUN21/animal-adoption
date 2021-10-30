@@ -39,6 +39,14 @@ public class AnimalService {
         return animalRepository.findByAgeBetween(ageFrom, ageTo);
     }
 
+    public List<Animal> findAvailableByType(String type) {
+        return animalRepository.findAvailableAnimalsByType(type);
+    }
+
+    public List<Animal> findAvilableByAgeBetween(Long ageFrom, Long ageTo){
+        return animalRepository.findAvailableAnimalsAgeBetween(ageFrom, ageTo);
+    }
+
     public Animal updateStatus(Long id, AnimalDTO animalDTO){
         Animal animal = findById(id);
         animal.setAvailable(animalDTO.isAvailable());
