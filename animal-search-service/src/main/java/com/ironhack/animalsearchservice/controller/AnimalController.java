@@ -48,4 +48,12 @@ public class AnimalController {
         return updateStatus(id, animalDTO);
     }
 
+    @PostMapping
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public Animal addAnimal(@RequestBody AnimalDTO animalDTO){
+        return animalService.addAnimal(animalDTO);
+    }
+
+
+
 }

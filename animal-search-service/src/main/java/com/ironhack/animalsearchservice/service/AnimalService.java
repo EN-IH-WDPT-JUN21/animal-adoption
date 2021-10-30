@@ -41,4 +41,14 @@ public class AnimalService {
         return animalRepository.save(animal);
     }
 
+    public Animal addAnimal(AnimalDTO animalDTO){
+        Animal newAnimal = new Animal(
+                animalDTO.getName(),
+                animalDTO.getType(),
+                animalDTO.getAge(),
+                animalDTO.isAvailable()
+        );
+        return animalRepository.save(newAnimal);
+    }
+
 }
