@@ -5,13 +5,11 @@ import com.Ironhack.miniadopterprojectadopter.dto.AdopterDTO;
 import com.Ironhack.miniadopterprojectadopter.dto.AnimalDTO;
 import com.Ironhack.miniadopterprojectadopter.proxy.AnimalProxy;
 import com.Ironhack.miniadopterprojectadopter.repository.AdopterRepository;
-import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.Optional;
 
 @Service
 public class AdopterService {
