@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/adopter")
+@RequestMapping("/api")
 public class AdopterController {
 
     @Autowired
     AdopterService adopterService;
 
-    @PostMapping("/adopt")
+    @PostMapping("/adopters")
     @ResponseStatus(HttpStatus.CREATED)
-    public Adopter create(@RequestBody @Valid AdopterDTO adopterDTO){
+    public Adopter adoptAnimal(@RequestBody @Valid AdopterDTO adopterDTO){
         return adopterService.adopt(adopterDTO);
     }
 
