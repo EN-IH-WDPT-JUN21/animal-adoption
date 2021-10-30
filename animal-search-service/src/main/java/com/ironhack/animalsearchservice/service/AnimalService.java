@@ -17,6 +17,10 @@ public class AnimalService {
     @Autowired
     private AnimalRepository animalRepository;
 
+    public List<Animal> findAllAvailable(){
+        return animalRepository.findAvailableAnimals();
+    }
+
     public Animal findById(Long id){
         Optional<Animal> animalOptional = animalRepository.findById(id);
         if(animalOptional.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No animal found with id: " + id);

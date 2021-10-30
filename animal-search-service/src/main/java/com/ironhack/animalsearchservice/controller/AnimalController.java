@@ -22,6 +22,12 @@ public class AnimalController {
         return animalService.findAll();
     }
 
+    @GetMapping("/available")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public List<Animal> findAllAvailable(){
+        return animalService.findAllAvailable();
+    }
+
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Animal findById(@PathVariable Long id){
