@@ -47,10 +47,10 @@ public class IAdoptionService implements AdoptionService {
     }
 
     @Override
-    public AdoptionConfirmationDto adoptAnimal(AdoptionRequestDto requestDto) {
+    public AdoptionConfirmationDto adoptAnimal(AdopterDto requestDto) {
 
-        AdopterDto adopterDto = adopterProxy.adoptAnimal(requestDto.getAdopter());
-        AnimalDto animalDto = animalProxy.findAnimalById(requestDto.getAnimalId());
+        AdopterDto adopterDto = adopterProxy.adoptAnimal(requestDto);
+        AnimalDto animalDto = animalProxy.findAnimalById(requestDto.getPet());
 
        return new AdoptionConfirmationDto(adopterDto,animalDto,
                 Status.ADOPTED);

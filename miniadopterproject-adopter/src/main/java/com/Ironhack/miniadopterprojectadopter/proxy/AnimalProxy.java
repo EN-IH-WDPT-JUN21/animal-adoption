@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient("animal-service")
+@FeignClient("animal-search-service")
 public interface AnimalProxy {
 
     @GetMapping("api/animals/{id}")

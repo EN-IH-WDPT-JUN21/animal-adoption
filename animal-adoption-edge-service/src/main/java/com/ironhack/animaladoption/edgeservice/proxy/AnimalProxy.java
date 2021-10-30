@@ -13,16 +13,16 @@ import java.util.List;
 @FeignClient("ANIMAL-SEARCH-SERVICE")
 public interface AnimalProxy {
 
-    @GetMapping("/api/animals")
+    @GetMapping("/api/animals/available")
     List<AnimalDto> getAllAvailableAnimals();
 
-    @GetMapping("/api/animals/{id}")
+    @GetMapping("/api/animals/available/{id}")
     AnimalDto findAnimalById(@PathVariable(name="id") Long animalId);
 
-    @GetMapping("/api/animals/{type}")
+    @GetMapping("/api/animals/available/{type}")
     List<AnimalDto> getAvailableAnimalsByType(@PathVariable(name="type") String type);
 
-    @GetMapping("/api/animals/{ageFrom}/{ageTo}")
+    @GetMapping("/api/animals/available/{ageFrom}/{ageTo}")
     List<AnimalDto> getAvailableAnimalsByAge(@PathVariable(name="ageFrom") Long ageFrom,
                                              @PathVariable(name="ageTo") Long ageTo);
     @PutMapping("api/animals/{id}")
