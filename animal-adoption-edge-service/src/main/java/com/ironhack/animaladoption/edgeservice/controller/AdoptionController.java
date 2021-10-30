@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@RestController("/api/animals")
+@RestController
+@RequestMapping("/api/animals")
 public class AdoptionController {
 
     @Autowired

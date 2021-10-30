@@ -16,7 +16,7 @@ public interface AnimalProxy {
     @GetMapping("/api/animals/available")
     List<AnimalDto> getAllAvailableAnimals();
 
-    @GetMapping("/api/animals/available/{id}")
+    @GetMapping("/api/animals/{id}")
     AnimalDto findAnimalById(@PathVariable(name="id") Long animalId);
 
     @GetMapping("/api/animals/available/{type}")

@@ -14,7 +14,7 @@ public class AnimalDto {
     private Long id;
     private String name;
     private String type;
-    private Integer age;
+    private Long age;
     private boolean available;
 
 }

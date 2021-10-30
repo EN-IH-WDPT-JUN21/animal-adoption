@@ -52,7 +52,11 @@ public class IAdoptionService implements AdoptionService {
         AdopterDto adopterDto = adopterProxy.adoptAnimal(requestDto);
         AnimalDto animalDto = animalProxy.findAnimalById(requestDto.getPet());
 
-       return new AdoptionConfirmationDto(adopterDto,animalDto,
+
+
+       return new AdoptionConfirmationDto(
+               adopterDto,
+               animalDto,
                 Status.ADOPTED);
 
     }

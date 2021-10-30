@@ -29,7 +29,7 @@ public class AnimalController {
         return animalService.findById(id);
     }
 
-    @GetMapping("/{type}")
+    @GetMapping("/type/{type}")
     @ResponseStatus(HttpStatus.OK)
     public List<Animal> findByType(@PathVariable String type){
         return animalService.findByType(type);
@@ -63,9 +63,8 @@ public class AnimalController {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Animal updateStatus(@PathVariable(name="id") Long id,
-                               @RequestBody AnimalDTO animalDTO){
-        return updateStatus(id, animalDTO);
+    public Animal updateStatus(@PathVariable(name="id") Long id, @RequestBody AnimalDTO animalDTO){
+        return animalService.updateStatus(id, animalDTO);
     }
 
     @PostMapping
@@ -78,7 +77,7 @@ public class AnimalController {
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Animal updateAnimal(@PathVariable Long id,
                                @RequestBody AnimalDTO animalDTO){
-        return updateAnimal(id, animalDTO);
+        return animalService.updateAnimal(id, animalDTO);
     }
 
 

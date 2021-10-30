@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient("animal-search-service")
 public interface AnimalProxy {
 
-    @GetMapping("api/animals/{id}")
+    @GetMapping("/api/animals/{id}")
     public AnimalDTO findById(@PathVariable("id") Long id);
 
-    @PutMapping("/{id}")
+    @PutMapping("/api/animals/{id}")
     public AnimalDTO updateStatus(@PathVariable(name="id") Long id,
                                   @RequestBody AnimalDTO animalDTO);
 
