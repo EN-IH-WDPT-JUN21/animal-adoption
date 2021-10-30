@@ -54,6 +54,13 @@ public class AnimalController {
         return animalService.addAnimal(animalDTO);
     }
 
+    @PutMapping("/{id}/update")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public Animal updateAnimal(@PathVariable Long id,
+                               @RequestBody AnimalDTO animalDTO){
+        return updateAnimal(id, animalDTO);
+    }
+
 
 
 }

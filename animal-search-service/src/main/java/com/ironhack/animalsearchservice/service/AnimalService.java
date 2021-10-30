@@ -51,4 +51,18 @@ public class AnimalService {
         return animalRepository.save(newAnimal);
     }
 
+    public Animal updateAnimal(Long id, AnimalDTO animalDTO){
+        Animal animal = findById(id);
+        if(animalDTO.getName() != null){
+            animal.setName(animalDTO.getName());
+        }
+        if(animalDTO.getType() != null){
+            animal.setType(animalDTO.getType());
+        }
+        if(animalDTO.getAge() != null){
+            animal.setAge(animalDTO.getAge());
+        }
+        return animalRepository.save(animal);
+    }
+
 }

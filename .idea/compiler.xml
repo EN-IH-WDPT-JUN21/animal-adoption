@@ -7,15 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="animal-search-service" />
         <module name="animal-adoption-edge-service" />
+        <module name="animal-search-service" />
         <module name="discovery-service" />
+        <module name="miniadopterproject-adopter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="animal-adoption-edge-service" target="17" />
       <module name="animal-search-service" target="17" />
       <module name="discovery-service" target="17" />
+      <module name="miniadopterproject-adopter" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -23,6 +25,7 @@
       <module name="animal-adoption-edge-service" options="-parameters" />
       <module name="animal-search-service" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
+      <module name="miniadopterproject-adopter" options="-parameters" />
     </option>
   </component>
 </project>

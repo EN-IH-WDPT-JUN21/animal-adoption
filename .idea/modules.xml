@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/animal-adoption-edge-service/animal-adoption-edge-service.iml" filepath="$PROJECT_DIR$/animal-adoption-edge-service/animal-adoption-edge-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/animal-search-service/animal-search-service.iml" filepath="$PROJECT_DIR$/animal-search-service/animal-search-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery-service/discovery-service.iml" filepath="$PROJECT_DIR$/discovery-service/discovery-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniadopterproject-adopter/miniadopterproject-adopter.iml" filepath="$PROJECT_DIR$/miniadopterproject-adopter/miniadopterproject-adopter.iml" />
     </modules>
   </component>
 </project>
