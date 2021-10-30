@@ -25,4 +25,8 @@ public class Adopter {
 
     private Long pet;
 
+    public Adopter(String name, Long pet) {
+        this.name = name;
+        this.pet = pet;
+    }
 }
