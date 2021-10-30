@@ -3,7 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/animal-adoption-edge-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/animal-adoption-edge-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/animal-search-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/animal-search-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/discovery-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/discovery-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniadopterproject-adopter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/miniadopterproject-adopter/src/main/resources" charset="UTF-8" />
   </component>
 </project>
