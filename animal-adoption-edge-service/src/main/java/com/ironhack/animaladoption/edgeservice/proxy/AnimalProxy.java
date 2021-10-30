@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import javax.validation.Valid;
 import java.util.List;
 
-@FeignClient("ANIMAL-SEARCH-SERVICE")
+@FeignClient("animal-search-service")
 public interface AnimalProxy {
 
     @GetMapping("/api/animals/available")

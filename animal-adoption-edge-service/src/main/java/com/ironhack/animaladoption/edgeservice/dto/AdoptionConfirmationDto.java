@@ -14,7 +14,6 @@ public class AdoptionConfirmationDto {
 
     AdopterDto adopterDto;
     AnimalDto animalDto;
-
     Status adoptionStatus;
 
 

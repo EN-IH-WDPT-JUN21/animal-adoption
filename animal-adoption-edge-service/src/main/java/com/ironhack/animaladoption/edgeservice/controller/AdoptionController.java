@@ -14,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/animals")
+@CrossOrigin(exposedHeaders = "Access-Control-Allow-Origin")
 public class AdoptionController {
 
     @Autowired
@@ -25,13 +26,11 @@ public class AdoptionController {
         return adoptionService.getAvailableAnimals(availableAnimalDto);
     }
 
-
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<AnimalDto> getALlAvailableAnimals() {
         return adoptionService.getAllAvailableAnimals();
     }
-
 
     @PostMapping("/adopt")
     @ResponseStatus(HttpStatus.CREATED)
